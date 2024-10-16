@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-    ArrayList<Games> games = new ArrayList<Games>();
+    ArrayList<Cats> games = new ArrayList<Cats>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,23 +23,31 @@ public class MainActivity extends AppCompatActivity {
         initRV();
     }
     private void loadData() {
-        games.add(new Games("https://upload.wikimedia.org/wikipedia/en/2/22/Death_Stranding.jpg",
-                "Death Stranding",
-                "39,99 $"));
-        games.add(new Games("https://upload.wikimedia.org/wikipedia/ru/thumb/d/d7/Until_Dawn_cover_art.jpg/640px-Until_Dawn_cover_art.jpg",
-                "Until Dawn",
-                "59,99 $"));
-        games.add(new Games("https://upload.wikimedia.org/wikipedia/ru/8/8c/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Doom_Eternal.jpg",
-                "Doom: Eternal",
-                "39,99 $"));
-        games.add(new Games("https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg",
-                "Elden Ring",
-                "59,99 $"));
+        games.add(new Cats("https://static.wikia.nocookie.net/battle-cats/images/a/a8/148_1.png",
+                "Rocker Cat",
+                "Chapter 1: 210¢\n" +
+                        "Chapter 2: 315¢\n" +
+                        "Chapter 3: 420¢"));
+        games.add(new Cats("https://static.wikia.nocookie.net/battle-cats/images/5/59/046_1.png",
+                "Jurassic Cat",
+                "Chapter 1: 350¢\n" +
+                        "Chapter 2: 525¢\n" +
+                        "Chapter 3: 700¢"));
+        games.add(new Cats("https://static.wikia.nocookie.net/battle-cats/images/f/f4/197_1.png",
+                "Psychocat",
+                "Chapter 1: 350¢\n" +
+                        "Chapter 2: 525¢\n" +
+                        "Chapter 3: 700¢"));
+        games.add(new Cats("https://static.wikia.nocookie.net/battle-cats/images/6/6c/198_1.png",
+                "Onmyoji Cat",
+                "Chapter 1: 340¢\n" +
+                        "Chapter 2: 510¢\n" +
+                        "Chapter 3: 680¢"));
     }
 
     private void initRV(){
         RecyclerView recyclerView = findViewById(R.id.rv_games);
-        GamesAdapter adapter = new GamesAdapter(this.getLayoutInflater(), games);
+        CatsAdapter adapter = new CatsAdapter(this.getLayoutInflater(), games);
         recyclerView.setAdapter(adapter);
     }
 

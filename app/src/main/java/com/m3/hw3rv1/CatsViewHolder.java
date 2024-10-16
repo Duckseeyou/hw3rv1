@@ -10,19 +10,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 
-public class GamesViewHolder extends RecyclerView.ViewHolder {
+public class CatsViewHolder extends RecyclerView.ViewHolder {
     private ImageView ivCover;
     private TextView tvName,tvPrice;
-    public GamesViewHolder(@NonNull View itemView) {
+    public CatsViewHolder(@NonNull View itemView) {
         super(itemView);
         ivCover = itemView.findViewById(R.id.iv_cover);
         tvPrice = itemView.findViewById(R.id.tv_price);
         tvName = itemView.findViewById(R.id.tv_name);
     }
-    void onBind(Games games){
-        Glide.with(ivCover.getContext()).load(games.getImage()).into(ivCover);
-        tvName.setText(games.getName());
-        tvPrice.setText(games.getPrice());
+    void onBind(Cats cats){
+        Glide.with(ivCover.getContext()).load(cats.getImage()).into(ivCover);
+        tvName.setText(cats.getName());
+        tvPrice.setText(cats.getPrice());
 
     }
 }

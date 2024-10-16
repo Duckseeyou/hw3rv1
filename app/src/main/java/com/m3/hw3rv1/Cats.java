@@ -1,11 +1,11 @@
 package com.m3.hw3rv1;
 
-public class Games {
+public class Cats {
     private String name;
     private String image;
     private String price;
 
-    public Games(String image,String name,String price) {
+    public Cats(String image, String name, String price) {
         this.image = image;
         this.price = price;
         this.name = name;

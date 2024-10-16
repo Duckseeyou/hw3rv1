@@ -9,26 +9,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class GamesAdapter extends RecyclerView.Adapter<GamesViewHolder> {
+public class CatsAdapter extends RecyclerView.Adapter<CatsViewHolder> {
     private LayoutInflater inflater;
-    private ArrayList<Games> games;
+    private ArrayList<Cats> games;
 
 
-    public GamesAdapter(LayoutInflater inflater, ArrayList<Games> games) {
+    public CatsAdapter(LayoutInflater inflater, ArrayList<Cats> games) {
         this.inflater = inflater;
         this.games = games;
     }
 
     @NonNull
     @Override
-    public GamesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CatsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.item_games, parent, false);
-        return new GamesViewHolder(view);
+        return new CatsViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GamesViewHolder holder, int position) {
-        Games game = games.get(position);
+    public void onBindViewHolder(@NonNull CatsViewHolder holder, int position) {
+        Cats game = games.get(position);
         holder.onBind(game);
     }
 
