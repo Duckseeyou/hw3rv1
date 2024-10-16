@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-    ArrayList<Games> games = new ArrayList<Games>();
+    ArrayList<Movies> games = new ArrayList<Movies>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,23 +23,23 @@ public class MainActivity extends AppCompatActivity {
         initRV();
     }
     private void loadData() {
-        games.add(new Games("https://upload.wikimedia.org/wikipedia/en/2/22/Death_Stranding.jpg",
-                "Death Stranding",
-                "39,99 $"));
-        games.add(new Games("https://upload.wikimedia.org/wikipedia/ru/thumb/d/d7/Until_Dawn_cover_art.jpg/640px-Until_Dawn_cover_art.jpg",
-                "Until Dawn",
-                "59,99 $"));
-        games.add(new Games("https://upload.wikimedia.org/wikipedia/ru/8/8c/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Doom_Eternal.jpg",
-                "Doom: Eternal",
-                "39,99 $"));
-        games.add(new Games("https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg",
-                "Elden Ring",
-                "59,99 $"));
+        games.add(new Movies("https://m.media-amazon.com/images/M/MV5BYTJkNGQyZDgtZDQ0NC00MDM0LWEzZWQtYzUzZDEwMDljZWNjXkEyXkFqcGc@._V1_.jpg",
+                "The Godfather",
+                "9.2/10"));
+        games.add(new Movies("https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+                "The Dark Knight",
+                "9.0/10"));
+        games.add(new Movies("https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_.jpg",
+                "Forrest Gump",
+                "8.9/10"));
+        games.add(new Movies("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfSjSWOCaw5dnDL2GT1zFd9RMCgUGw5Q2Cfg&s",
+                "The Matrix",
+                "8.7/10"));
     }
 
     private void initRV(){
         RecyclerView recyclerView = findViewById(R.id.rv_games);
-        GamesAdapter adapter = new GamesAdapter(this.getLayoutInflater(), games);
+        MoviesAdapter adapter = new MoviesAdapter(this.getLayoutInflater(), games);
         recyclerView.setAdapter(adapter);
     }
 
